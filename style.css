@@ -1,0 +1,58 @@
+
+#page {
+    max-width: 1000px;
+    background-image: url(page-background.jpg);
+    background-repeat: no-repeat;
+    object-fit: fill;
+    object-position: center;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 800px;
+}
+
+#game {
+    width: 500px;
+    height: 200px;
+    background: #6b88fe;
+    background-image: url(background.jpg);
+    border: 1px solid black;
+    overflow: hidden;
+    
+}
+
+#character {
+    width: 20px;
+    height: 20px;
+    background-image: url(mario.png);
+    position: relative;
+    top: 150px;
+    
+}
+
+.animate {
+    animation: jump 500ms;
+}
+
+@keyframes jump {
+    0%{top: 150px;}
+    30%{top: 100px;}
+    70%{top: 100px;}
+    100%{top: 150px;}
+}
+
+#enemy {
+    width: 20px;
+    height: 20px;
+    background-image: url(goomba.png);
+    position: relative;
+    top: 130px;
+    left: 480px;
+    animation: enemy-animation 1s infinite linear;
+}
+
+@keyframes enemy-animation{
+    0%{left:480px;}
+    100%{left:-40px;}
+}
